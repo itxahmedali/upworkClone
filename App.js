@@ -1,18 +1,19 @@
 import React, {useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import SplashScreen from 'react-native-splash-screen'
+import SplashScreen from 'react-native-splash-screen';
+import {NavigationContainer} from '@react-navigation/native';
+import { MainStackNavigator } from './Navigation/StackNavigator';
+import BottomTabNavigator from './Navigation/BottomTabNavigator';
 const App = () => {
   useEffect(() => {
     SplashScreen.hide();
-    console.log("splashscreen hide");
+    console.log('splashscreen hide');
   }, []);
-  return (
-    <View>
-      <Text>Hello</Text>
-    </View>
-  );
-}
+  return <NavigationContainer>
+    <BottomTabNavigator />
+  </NavigationContainer>;
+};
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
 
 export default App;

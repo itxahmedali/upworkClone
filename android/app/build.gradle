@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
-
+// vector icons
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 import com.android.build.OutputFile
 
 /**
@@ -256,6 +257,8 @@ android {
 }
 
 dependencies {
+    // vector icons
+    implementation project(':react-native-vector-icons')
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     //noinspection GradleDynamicVersion
