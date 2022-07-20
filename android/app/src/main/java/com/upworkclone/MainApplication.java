@@ -12,7 +12,6 @@ import com.facebook.soloader.SoLoader;
 import com.upworkclone.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
