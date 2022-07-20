@@ -13,15 +13,12 @@ const BottomTabNavigator = () => {
     tabBarOptions={{
       activeTintColor: 'green',
       inactiveTintColor: 'gray',
-      style: {
-        paddingBottom: 3
-  }
    }}
       screenOptions={{headerShown: false}}>
       <Tab.Screen
         options={{
           tabBarIcon: ({size, color, focused}) => (
-            <FontAwesome name={'search'} color={focused ? 'green' : "#000"} size={20} />
+            <FontAwesome name={'search'} color={focused ? 'green' : "grey"} size={20} />
           ),
         }}
         name="Jobs"
@@ -30,7 +27,7 @@ const BottomTabNavigator = () => {
       <Tab.Screen
         options={{
           tabBarIcon: ({size, color, focused}) => (
-            <FontAwesome5 name={'file-signature'} color={focused ? 'green' : "#000"} size={20} />
+            <FontAwesome5 name={'file-signature'} color={focused ? 'green' : "grey"} size={20} />
           ),
         }}
         name="Proposals"
@@ -39,7 +36,7 @@ const BottomTabNavigator = () => {
       <Tab.Screen
         options={{
           tabBarIcon: ({size, color, focused}) => (
-            <FontAwesome name={'file-text'} color={focused ? 'green' : "#000"} size={20} />
+            <FontAwesome name={'file-text'} color={focused ? 'green' : "grey"} size={20} />
           ),
         }}
         name="Contracts"
@@ -48,7 +45,7 @@ const BottomTabNavigator = () => {
       <Tab.Screen
         options={{
           tabBarIcon: ({size, color, focused}) => (
-            <FontAwesome name={'envelope'} color={focused ? 'green' : "#000"} size={20} />
+            <FontAwesome name={'envelope'} color={focused ? 'green' : "grey"} size={20} />
           ),
         }}
         name="Messages"
@@ -57,7 +54,7 @@ const BottomTabNavigator = () => {
       <Tab.Screen
         options={{
           tabBarIcon: ({size, color, focused}) => (
-            <FontAwesome name={'bell'} color={focused ? 'green' : "#000"} size={20} />
+            <FontAwesome name={'bell'} color={focused ? 'green' : "grey"} size={20} />
           ),
         }}
         name="Alerts"
