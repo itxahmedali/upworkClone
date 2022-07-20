@@ -31,7 +31,7 @@ const BottomTabNavigator = () => {
           ),
         }}
         name="Proposals"
-        component={MainStackNavigator}
+        component={About}
       />
       <Tab.Screen
         options={{
