@@ -1,33 +1,36 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
-import {MainStackNavigator} from './StackNavigator';
 import About from '../Screens/About';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Jobs from '../Screens/Jobs';
+import { SafeAreaView } from 'react-native';
 const Tab = createBottomTabNavigator();
 
-const BottomTabNavigator = () => {
+const BottomTabNavigator = ({navigation}) => {
   return (
     <Tab.Navigator
     tabBarOptions={{
       activeTintColor: 'green',
       inactiveTintColor: 'gray',
-   }}
-      screenOptions={{headerShown: false}}>
+      labelStyle: {
+        marginBottom: 10,
+      },
+    }}
+    screenOptions={{headerShown: false}}>
       <Tab.Screen
         options={{
           tabBarIcon: ({size, color, focused}) => (
-            <FontAwesome name={'search'} color={focused ? 'green' : "grey"} size={20} />
+            <FontAwesome name={'search'} style={{marginTop:5}} color={focused ? 'green' : "grey"} size={20} />
           ),
         }}
         name="Jobs"
-        component={MainStackNavigator}
+        component={Jobs}
       />
       <Tab.Screen
         options={{
           tabBarIcon: ({size, color, focused}) => (
-            <FontAwesome5 name={'file-signature'} color={focused ? 'green' : "grey"} size={20} />
+            <FontAwesome5 name={'file-signature'} style={{marginTop:5}} color={focused ? 'green' : "grey"} size={20} />
           ),
         }}
         name="Proposals"
@@ -36,29 +39,29 @@ const BottomTabNavigator = () => {
       <Tab.Screen
         options={{
           tabBarIcon: ({size, color, focused}) => (
-            <FontAwesome name={'file-text'} color={focused ? 'green' : "grey"} size={20} />
+            <FontAwesome name={'file-text'} style={{marginTop:5}} color={focused ? 'green' : "grey"} size={20} />
           ),
         }}
         name="Contracts"
-        component={MainStackNavigator}
+        component={Jobs}
       />
       <Tab.Screen
         options={{
           tabBarIcon: ({size, color, focused}) => (
-            <FontAwesome name={'envelope'} color={focused ? 'green' : "grey"} size={20} />
+            <FontAwesome name={'envelope'} style={{marginTop:5}} color={focused ? 'green' : "grey"} size={20} />
           ),
         }}
         name="Messages"
-        component={MainStackNavigator}
+        component={Jobs}
       />
       <Tab.Screen
         options={{
           tabBarIcon: ({size, color, focused}) => (
-            <FontAwesome name={'bell'} color={focused ? 'green' : "grey"} size={20} />
+            <FontAwesome name={'bell'} style={{marginTop:5}} color={focused ? 'green' : "grey"} size={20} />
           ),
         }}
         name="Alerts"
-        component={MainStackNavigator}
+        component={Jobs}
       />
     </Tab.Navigator>
   );
