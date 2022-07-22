@@ -7,12 +7,16 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import Jobs from './Screens/Jobs';
 import DrawerContent from './Navigation/DrawerContent';
 import {createStackNavigator} from '@react-navigation/stack';
+import Login from './Screens/Login';
+import Main from './Screens/Main';
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 const App = () => {
   const MainStackNavigator = () => {
     return (
       <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Main" component={Main} />
+        <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
       </Stack.Navigator>
     );
